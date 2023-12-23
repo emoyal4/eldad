@@ -1,0 +1,146 @@
+$color-brand: #007aff;
+$main-text-color: #000;
+$secondary-text-color: #fff;
+
+$desktop-inline-padding: 2rem;
+$tablet-inline-padding: 1rem;
+$mobile-inline-padding: 0.5rem;
+
+.App{
+  background: #f1f0f4;
+}
+
+.header{
+  background: $color-brand;
+  color: $secondary-text-color;
+  position: fixed;
+  width: fill-available;
+  height: 60px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: $mobile-inline-padding;
+
+  @media screen and (min-width: 1200px) {
+    padding-inline: $desktop-inline-padding;
+  }
+  @media screen and (min-width: 800px) {
+    padding-inline: $tablet-inline-padding;
+  }
+ 
+
+
+  &__avatar{
+    width: 35px;
+    height: 35px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+  }
+  &__title{
+
+
+  }
+  &__hamburger{
+
+  }
+}
+
+.search-box{
+  margin-top: 60px;
+
+  input{
+    height: 30px;
+    padding: 0.25em 1em;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b3b2b5;
+    @media screen and (min-width: 800px) {
+      width: 400px;
+    }
+  }
+}
+
+.stat-list{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin-top: 0.5em;
+
+}
+
+.stat-preview{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  background-color: #fff;
+  border: none;
+  border-top: 1px solid #c6c5c8;
+  border-bottom: 1px solid #c6c5c8;
+  padding: 0.5em $mobile-inline-padding;
+
+  @media screen and (min-width: 1200px) {
+    padding-inline: $desktop-inline-padding;
+  }
+  @media screen and (min-width: 800px) {
+    padding-inline: $tablet-inline-padding;
+  }
+
+  .stat-image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .stat-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .top-line{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1.5em 1.5em;
+    font-size: 14px;
+
+    .stat{
+
+      &-name{
+        font-size: 16px;
+        text-align: start;
+      }
+      &-code{
+        font-size: 12px;
+        color: rgba($main-text-color,0.7);
+        text-align: start;
+      }
+      &-time{
+        text-align: end;
+      }
+      &-status{
+        text-align: end;
+      }
+    }
+  }
+
+  .bottom-line{
+    display: flex;
+    gap: 1em;
+
+    i{
+      font-size: 14px;
+    }
+
+  > {
+    display: flex;
+    align-items: center;
+  }
+  }
+}
+
